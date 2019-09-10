@@ -6,9 +6,14 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class UserService {
 
-  public users: BehaviorSubject<string[]> = new BehaviorSubject([  ]);
+  public users: BehaviorSubject<string[]> = new BehaviorSubject(
+    ['Jacques Célair', 'Yves Haderrapé', 'Elie Coptaire']
+  );
 
-  addUser(): void { }
+  addUser(name: string): void {
+    this.users.value.push(name);
+    this.users.next(this.users.value);
+  }
 
   constructor() { }
 }

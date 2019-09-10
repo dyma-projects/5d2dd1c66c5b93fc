@@ -13,12 +13,13 @@ export class AddUserComponent implements OnInit {
 
   constructor(private addUserService: UserService) { }
 
-  ngOnInit() {  }
+  ngOnInit() { }
 
-  addUser() {
+  addUser(): void {
     const username = this.el.nativeElement.value;
     if (username) {
       // on utilise le service ici pour ajouter l'utilisateur;
+      this.addUserService.addUser(username);
       this.el.nativeElement.value = '';
     }
   }
