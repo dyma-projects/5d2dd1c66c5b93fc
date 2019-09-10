@@ -17,7 +17,7 @@ Puis lancer le serveur de développement avec :
 `ng serve` ou `npm start`
 
 ## Objectifs
-- [ ] Créer un service `UserService` dans le dossier shared/services.
+- [X] Créer un service `UserService` dans le dossier shared/services.
 - [ ] Dans ce service, utilisez un attribut public ( `public users` ) qui sera un `BehaviorSubject` de type `string[]`. Ajoutez également une méthode `addUser()` pour pouvoir ajouter un nom d'utilisateur dans cet attribut.
 - [ ] Injectez le service dans le composant `AddUserComponent`.
 - [ ] Utilisez la méthode `AddUser()` du service `UserService` pour ajouter un user dans le BehaviorSubject `public users`.
